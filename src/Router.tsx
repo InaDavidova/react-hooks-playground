@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import UseEffectExample from "./components/UseEffect.tsx";
 import UseRefExample from "./components/UseRef.tsx";
 import UseCallbackExample from "./components/UseCallback.tsx";
+import UseMemoExample from "./components/UseMemo.tsx";
 
 function Router() {
   return (
@@ -13,6 +14,7 @@ function Router() {
       <Route path="/use-effect" element={<UseEffectExample />} />
       <Route path="/use-ref" element={<UseRefExample />} />
       <Route path="/use-callback" element={<UseCallbackExample />} />
+      <Route path="/use-memo" element={<UseMemoExample />} />
     </Routes>
   );
 }

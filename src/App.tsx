@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
-import UseStateExample from "./components/UseState.tsx";
 import Router from "./Router.tsx";
 
 function App() {
@@ -22,6 +21,9 @@ function App() {
           </li>
           <li>
             <Link to={"use-callback"}>useCallback</Link>
+          </li>
+          <li>
+            <Link to={"use-memo"}>useMemo</Link>
           </li>
         </ul>
       </nav>
