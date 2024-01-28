@@ -3,15 +3,13 @@ import React, { useMemo, useState } from "react";
 const UseMemoExample = () => {
   const [number1, setNumber1] = useState(0);
   const [number2, setNumber2] = useState(0);
-  const [sum, setSum] = useState(0);
 
   const someHeavyCalculation = useMemo(() => {
     console.log("doing heavy calculations");
 
     const result = number1 + number2;
-    // setSum(result);
     return result;
-  },[number1, number2]);
+  }, [number1, number2]);
 
   return (
     <>
@@ -30,9 +28,16 @@ const UseMemoExample = () => {
         onChange={(e) => setNumber2(Number(e.target.value))}
       />
 
-      <button onClick={() => setSum(someHeavyCalculation)}>Calculate</button>
+      <button
+        onClick={() => {
+          setNumber1(number1);
+          setNumber2(number2);
+        }}
+      >
+        Calculate
+      </button>
 
-      <p>The sum of this equation in {sum}</p>
+      <p>The sum of this equation in {someHeavyCalculation}</p>
     </>
   );
 };

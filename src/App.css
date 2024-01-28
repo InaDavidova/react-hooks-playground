@@ -1,3 +1,25 @@
-h1, h2 {
+h1,
+h2 {
   text-align: center;
+}
+
+#post {
+  border: 1px solid gray;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  background-color: beige;
+}
+
+#marker {
+  background-color: red;
+  height: 5px;
+}
+
+#loading-div {
+  height: 100vh;
+}
+
+#loading-div p {
+  text-align: center;
+  margin-top: 20%;
 }
