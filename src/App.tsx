@@ -1,35 +1,68 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { createContext, useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./App.css";
 import Router from "./Router.tsx";
 
-function App() {
+type Context = {
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export const ThemeContext = createContext<Context>({
+  isDarkMode: false,
+  setIsDarkMode: () => {},
+});
+
+export default function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   return (
-    <div>
-      <h1>React Hooks</h1>
-      <hr />
-      <nav>
-        <ul>
-          <li>
-            <Link to={"use-state"}>useState</Link>
-          </li>
-          <li>
-            <Link to={"use-effect"}>useEffect</Link>
-          </li>{" "}
-          <li>
-            <Link to={"use-callback"}>useCallback</Link>
-          </li>
-          <li>
-            <Link to={"use-memo"}>useMemo</Link>
-          </li>
-          <li>
-            <Link to={"use-ref"}>useRef</Link>
-          </li>
-        </ul>
-      </nav>
-      <Router />
-    </div>
+    <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode }}>
+      <main className={isDarkMode ? "dark" : "light"}>
+        <h1>React Hooks</h1>
+        <hr />
+        <nav>
+          <ul>
+            <NavLink
+              to={"use-state"}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              useState
+            </NavLink>
+            <NavLink
+              to={"use-effect"}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              useEffect
+            </NavLink>
+            <NavLink
+              to={"use-callback"}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              useCallback
+            </NavLink>
+            <NavLink
+              to={"use-memo"}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              useMemo
+            </NavLink>
+            <NavLink
+              to={"use-ref"}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              useRef
+            </NavLink>
+            <NavLink
+              to={"use-context"}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              useContext
+            </NavLink>
+          </ul>
+        </nav>
+        <Router />
+      </main>
+    </ThemeContext.Provider>
   );
 }
-
-export default App;

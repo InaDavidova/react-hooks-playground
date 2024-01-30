@@ -5,6 +5,7 @@ import UseEffectExample from "./components/UseEffect.tsx";
 import UseRefExample from "./components/UseRef.tsx";
 import UseCallbackExample from "./components/UseCallback.tsx";
 import UseMemoExample from "./components/UseMemo.tsx";
+import UseContextExample from "./components/UseContext.tsx";
 
 function Router() {
   return (
@@ -12,9 +13,10 @@ function Router() {
       <Route path="/" element={<UseStateExample />} />
       <Route path="/use-state" element={<UseStateExample />} />
       <Route path="/use-effect" element={<UseEffectExample />} />
-      <Route path="/use-ref" element={<UseRefExample />} />
       <Route path="/use-callback" element={<UseCallbackExample />} />
       <Route path="/use-memo" element={<UseMemoExample />} />
+      <Route path="/use-ref" element={<UseRefExample />} />
+      <Route path="/use-context" element={<UseContextExample />} />
     </Routes>
   );
 }
