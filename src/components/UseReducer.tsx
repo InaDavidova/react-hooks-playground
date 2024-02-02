@@ -117,7 +117,7 @@ const UseReducerExample = () => {
               onClick={() => dispatch({ type: ACTIONS.DELETE_ITEM, payload: { id: el.id } })}
               // onClick={() => onDeleteHandle(el.id)}
             >
-              &#128473;
+             {'\u2715'}
             </button>
           </li>
         ))}
