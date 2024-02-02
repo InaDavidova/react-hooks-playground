@@ -59,6 +59,12 @@ export default function App() {
             >
               useContext
             </NavLink>
+            <NavLink
+              to={"use-reducer"}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              useReducer
+            </NavLink>
           </ul>
         </nav>
         <Router />
