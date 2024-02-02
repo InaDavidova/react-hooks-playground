@@ -67,6 +67,7 @@ export default function App() {
             </NavLink>
           </ul>
         </nav>
+        <hr />
         <Router />
       </main>
     </ThemeContext.Provider>

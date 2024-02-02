@@ -47,7 +47,7 @@ const UseRefExample = () => {
       {posts.length ? (
         posts.map((el, index) => (
           <div key={index} id="post">
-            <p>Post number: {el.id}</p>
+            <p>Post number: <span>{el.id}</span></p>
             <p>User: {el.userId}</p>
             <p>Title: {el.title}</p>
             <p>Post: {el.body}</p>
