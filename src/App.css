@@ -10,14 +10,15 @@ hr {
   width: 80%;
 }
 
-hr:nth-of-type(2){
+hr:nth-of-type(2) {
   width: 95%;
   height: 1px;
   background-color: pink;
 }
 
 h1,
-h2 {
+h2,
+h3 {
   text-align: center;
   margin: 0;
   padding: 20px 0;
@@ -164,4 +165,16 @@ button:hover {
 .dark #post {
   border: 1px solid gray;
   color: black;
+}
+
+#dogList {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+img {
+  max-width: 80vw;
 }

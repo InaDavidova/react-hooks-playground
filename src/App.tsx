@@ -65,6 +65,12 @@ export default function App() {
             >
               useReducer
             </NavLink>
+            <NavLink
+              to={"custom-hooks"}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Custom Hooks
+            </NavLink>
           </ul>
         </nav>
         <hr />
