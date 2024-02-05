@@ -5,7 +5,7 @@ const UseContextExample = () => {
   const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
 
   const toggleTheme = () => {
-    setIsDarkMode((predMode) => !predMode);
+    setIsDarkMode((prevMode) => !prevMode);
   };
 
   return (

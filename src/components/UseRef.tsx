@@ -27,6 +27,7 @@ const UseRefExample = () => {
 
     const observer = new IntersectionObserver((entries) => {
       const markerState = entries[0];
+      console.log(markerState);
 
       if (markerState.isIntersecting) {
         setPage((prevState) => prevState + 1);

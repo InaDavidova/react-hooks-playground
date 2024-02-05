@@ -32,6 +32,7 @@ const UseMemoExample = () => {
         onClick={() => {
           setNumber1(number1);
           setNumber2(number2);
+          console.log("button clicked");
         }}
       >
         Calculate
